@@ -11,19 +11,19 @@ export const projectsData = [
     category: "Education & Peer Learning",
     badge: "Mobile Platform",
     image: mentoraImg,
-    technologies: ["Flutter", "Firebase Auth", "Cloud Firestore", "Firebase Storage", "Provider", "SharedPreferences", "Google Sign-In"],
+    technologies: ["Flutter", "Agora RTC (Video)", "Cloud Firestore", "Firebase Auth", "Provider", "Google Sign-In"],
     shortDescription: "A Flutter mobile application designed to connect university students for peer tutoring, skill exchanges, and study requests backed by Firebase services.",
     features: [
-      "Firebase Auth & Google Sign-In onboarding flow",
+      "1-on-1 HD real-time video consultation sessions powered by Agora RTC",
+      "Firebase Auth & Google Sign-In secure onboarding flow",
       "Student profiles with customizable skills offered & requested",
-      "Peer matching feed with study request exchanges",
-      "Local preferences via SharedPreferences & profile media via Firebase Storage"
+      "Real-time direct messaging and session proposal pipeline"
     ],
-    githubUrl: "",
+    githubUrl: "https://github.com/mrabukust-cmd/Mentora",
     liveUrl: "",
     demoType: "apk", // Options: "live" | "video" | "apk" | "none"
-    githubStatus: "case-study", // Options: "public" | "private" | "case-study"
-    githubStatusNote: "Private academic repository (architecture walkthrough and APK available upon request)",
+    githubStatus: "public", // Options: "public" | "private" | "case-study"
+    githubStatusNote: "Public Repository",
     proofPoints: [
       "2 sign-in paths: email and Google",
       "4 core flows: profiles, skills, matching, requests",
@@ -249,7 +249,7 @@ export const projectsData = [
     category: "Education & Peer Learning",
     badge: "Full-Stack Project",
     image: schoolSystemImg,
-    technologies: ["Flutter", "Firebase", "Cloud Firestore", "Firebase Storage"],
+    technologies: ["Flutter", "Riverpod", "Node.js", "Express.js", "REST APIs", "JWT Auth"],
     shortDescription: "A school academic platform connecting Parents, Students, Teachers, and Admins to digitize attendance marking, grade tracking, and extra-class schedule visibility.",
     features: [
       "4 primary access roles: Parent, Student, Teacher, and Admin",
@@ -257,11 +257,11 @@ export const projectsData = [
       "Parent visibility into daily attendance and special/extra class schedules",
       "Student grade and attendance portal dashboards"
     ],
-    githubUrl: "",
+    githubUrl: "https://github.com/mrabukust-cmd/EduManage",
     liveUrl: "",
     demoType: "apk",
-    githubStatus: "case-study",
-    githubStatusNote: "Private academic repository (architecture walkthrough and APK available upon request)",
+    githubStatus: "public",
+    githubStatusNote: "Public Repository",
     proofPoints: [
       "4 access roles: Parent, Student, Teacher, Admin",
       "3 workflows: attendance, grades, schedules",
