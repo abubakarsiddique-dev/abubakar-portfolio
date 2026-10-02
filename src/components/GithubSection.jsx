@@ -9,7 +9,8 @@ export default function GithubSection() {
     const targetId = href.substring(1);
     const targetEl = document.getElementById(targetId);
     if (targetEl) {
-      targetEl.scrollIntoView({ behavior: 'smooth' });
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      targetEl.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
     }
   };
 
@@ -52,7 +53,12 @@ export default function GithubSection() {
                 <span>View GitHub Profile</span>
               </a>
 
-              <a href="#projects" onClick={(e) => handleNavClick(e, '#projects')} className="btn btn-secondary">
+              <a
+                href="#projects"
+                onClick={(e) => handleNavClick(e, '#projects')}
+                className="btn btn-secondary"
+                aria-label="Navigate to Featured Projects Section"
+              >
                 <FaFolderOpen />
                 <span>View Featured Projects</span>
               </a>
