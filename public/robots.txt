@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://abubakar-siddique.vercel.app/sitemap.xml
+Host: https://abubakar-siddique.vercel.app
