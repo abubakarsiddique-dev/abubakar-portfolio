@@ -36,7 +36,7 @@ export default function Navbar() {
     document.body.setAttribute('data-theme', theme);
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', theme === 'dark' ? '#0D0D11' : '#F9F8F6');
+      metaThemeColor.setAttribute('content', theme === 'dark' ? '#66444F' : '#FAF8EE');
     }
     try {
       localStorage.setItem('theme', theme);
