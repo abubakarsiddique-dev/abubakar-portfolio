@@ -106,7 +106,7 @@ export default function ProjectModal({ project, onClose }) {
 
   return (
     <AnimatePresence>
-      <div className="shared-modal-backdrop modal-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div key="project-modal-backdrop" className="shared-modal-backdrop modal-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <motion.div
           className="shared-modal-container modal-content glass-panel"
           onClick={(e) => e.stopPropagation()}

@@ -51,7 +51,7 @@ export default function ResumeModal({ isOpen, onClose }) {
 
   return (
     <AnimatePresence>
-      <div className="shared-modal-backdrop resume-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="resume-title">
+      <div key="resume-modal-backdrop" className="shared-modal-backdrop resume-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="resume-title">
         <motion.div
           className="shared-modal-container resume-modal-container glass-panel"
           onClick={(e) => e.stopPropagation()}
