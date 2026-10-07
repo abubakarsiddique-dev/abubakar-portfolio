@@ -17,7 +17,7 @@ Designed specifically for **Abubakar Siddique** (Software Engineering Student & 
 - **Styling**: Nordic Architectural Design System (Vanilla CSS3 Tokens, Zero Bloat)
 - **Animations**: Framer Motion 12 (Reduced-motion accessible)
 - **Typography**: Instrument Serif, Syne, DM Sans, Space Mono
-- **Testing**: Vitest 4 + React Testing Library (50 automated tests across 13 test suites)
+- **Testing**: Vitest 4 + React Testing Library (81 automated tests across 21 test suites)
 - **Linting**: Oxlint (Sub-20ms ultra-fast AST linting)
 - **Security & Headers**: HTTP Strict Transport Security (HSTS), X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy configured via `vercel.json`
 - **Bundle Optimization**: Rollup manual chunks splitting (`react-vendor`, `motion-vendor`, `icons-vendor`)
@@ -35,19 +35,27 @@ Designed specifically for **Abubakar Siddique** (Software Engineering Student & 
 
 ---
 
-## 🧪 Automated Test Suites (50 Tests)
+## 🧪 Automated Test Suites (81 Tests across 21 Suites)
 
 The test suite validates data schemas, business logic, component behavior, accessibility fallbacks, and error recovery:
 
 | Test Suite | File Path | Focus & Coverage |
 |------------|-----------|------------------|
 | **App Smoke & Integrations** | `src/components/__tests__/App.test.jsx` | Mount smoke test, error boundary integration, project filters, email regex |
+| **Navbar & Navigation** | `src/components/__tests__/Navbar.test.jsx` | Brand branding, theme palette toggling, mobile drawer, Escape key dismissal, CV modal trigger |
+| **Hero Section** | `src/components/__tests__/Hero.test.jsx` | Hero title, subtitle, CTAs, interactive Dart code tabs, clipboard copy feedback |
+| **About Section** | `src/components/__tests__/About.test.jsx` | Profile imagery, engineering philosophy, story paragraphs, continuous learning topics |
+| **Projects Showcase** | `src/components/__tests__/Projects.test.jsx` | Project catalog rendering, trust summary metrics, project details modal opening |
+| **Project Details Modal** | `src/components/__tests__/ProjectModal.test.jsx` | Modal dialog presentation, feature list, tech pills, close button & Escape handling |
+| **Skills & Filter Tabs** | `src/components/__tests__/Skills.test.jsx` | Skills categories, category filter tabs, proficiency indicators, reset to all |
+| **Journey Timeline** | `src/components/__tests__/Journey.test.jsx` | Timeline milestones, role badges, technical achievements |
 | **Contact Form** | `src/components/__tests__/Contact.test.jsx` | Validation, honeypot spam trap, character counter, clipboard copy feedback |
-| **Error Boundary** | `src/components/__tests__/ErrorBoundary.test.jsx` | Safe render, error catching, fallback UI, window reload trigger |
-| **Scroll To Top** | `src/components/__tests__/ScrollToTop.test.jsx` | Scroll threshold visibility, smooth scroll, reduced motion, listener cleanup |
-| **GitHub Section** | `src/components/__tests__/GithubSection.test.jsx` | Profile URL security, featured projects anchor navigation, motion adaptation |
 | **Services Section** | `src/components/__tests__/Services.test.jsx` | Service offerings, deliverable items, contact scroll CTA navigation |
+| **GitHub Section** | `src/components/__tests__/GithubSection.test.jsx` | Profile URL security, featured projects anchor navigation, motion adaptation |
+| **Scroll To Top** | `src/components/__tests__/ScrollToTop.test.jsx` | Scroll threshold visibility, smooth scroll, reduced motion, listener cleanup |
+| **Animated Counter** | `src/components/__tests__/AnimatedCounter.test.jsx` | Prefix/suffix bounds, in-view trigger, reduced-motion bypass, frame cancellation |
 | **Footer & Navigation** | `src/components/__tests__/Footer.test.jsx` | Dynamic copyright year, navigation mapping, external links, back-to-top |
+| **Error Boundary** | `src/components/__tests__/ErrorBoundary.test.jsx` | Safe render, error catching, fallback UI, window reload trigger |
 | **Projects Data Schema** | `src/data/__tests__/projects.test.js` | Schema integrity, required keys, image URLs, GitHub repo link validity |
 | **Journey Data** | `src/data/__tests__/journey.test.js` | Timeline entries, period badges, technical milestones |
 | **Navigation & Links** | `src/data/__tests__/navigation.test.js` | Route anchors, section link identifiers |
@@ -68,7 +76,7 @@ Available quality checks:
 
 ```bash
 npm run lint    # Runs Oxlint across all JSX and JS files
-npm test        # Runs Vitest unit and integration test suite (50 tests)
+npm test        # Runs Vitest unit and integration test suite (81 tests across 21 test suites)
 npm run build   # Validates production compilation and asset generation
 npm run check   # Runs lint, test, and build in sequence
 ```
