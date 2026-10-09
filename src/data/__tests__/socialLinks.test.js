@@ -8,12 +8,12 @@ describe('social link helpers', () => {
   });
 
   it('formats profile URLs without a protocol or trailing slash', () => {
-    expect(formatSocialDisplay('https://github.com/mrabukust-cmd/')).toBe('github.com/mrabukust-cmd');
+    expect(formatSocialDisplay('https://github.com/abubakarsiddique-dev/')).toBe('github.com/abubakarsiddique-dev');
     expect(formatSocialDisplay('')).toBe('');
   });
 
   it('normalizes accidental whitespace around a profile URL', () => {
-    expect(formatSocialDisplay('  https://github.com/mrabukust-cmd/  ')).toBe('github.com/mrabukust-cmd');
+    expect(formatSocialDisplay('  https://github.com/abubakarsiddique-dev/  ')).toBe('github.com/abubakarsiddique-dev');
   });
 
   it('returns an empty display value for non-string input', () => {
