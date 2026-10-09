@@ -19,7 +19,7 @@ export const projectsData = [
       "Student profiles with customizable skills offered & requested",
       "Real-time direct messaging and session proposal pipeline"
     ],
-    githubUrl: "https://github.com/mrabukust-cmd/Mentora",
+    githubUrl: "https://github.com/abubakarsiddique-dev/Mentora",
     liveUrl: "",
     demoType: "apk", // Options: "live" | "video" | "apk" | "none"
     githubStatus: "public", // Options: "public" | "private" | "case-study"
@@ -257,7 +257,7 @@ export const projectsData = [
       "Parent visibility into daily attendance and special/extra class schedules",
       "Student grade and attendance portal dashboards"
     ],
-    githubUrl: "https://github.com/mrabukust-cmd/EduManage",
+    githubUrl: "https://github.com/abubakarsiddique-dev/EduManage",
     liveUrl: "",
     demoType: "apk",
     githubStatus: "public",
