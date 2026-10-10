@@ -18,4 +18,14 @@ describe('navigation data', () => {
       '#home', '#about', '#projects', '#services', '#skills', '#experience', '#contact',
     ]));
   });
+
+  it('ensures each navigation item defines a valid icon component and non-empty label', () => {
+    for (const link of navLinks) {
+      expect(typeof link.name).toBe('string');
+      expect(link.name.trim().length).toBeGreaterThan(0);
+      expect(typeof link.href).toBe('string');
+      expect(typeof link.icon).toBe('function');
+    }
+  });
 });
+
