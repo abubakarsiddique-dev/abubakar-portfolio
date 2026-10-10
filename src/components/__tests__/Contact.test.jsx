@@ -50,7 +50,16 @@ describe('Contact component', () => {
     expect(copyBtn).toHaveAttribute('type', 'button');
     expect(copyBtn).toBeInTheDocument();
   });
+
+  it('configures honeypot bot trap field with tabIndex -1 and off autocomplete', () => {
+    render(<Contact />);
+    const honeypotInput = screen.getByLabelText('Website');
+    expect(honeypotInput).toHaveAttribute('tabIndex', '-1');
+    expect(honeypotInput).toHaveAttribute('autoComplete', 'off');
+    expect(honeypotInput.closest('.contact-honeypot')).toHaveAttribute('aria-hidden', 'true');
+  });
 });
+
 
 // ---------------------------------------------------------------------------
 // EMAIL_REGEX unit tests
