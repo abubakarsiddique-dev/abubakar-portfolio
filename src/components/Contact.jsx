@@ -663,6 +663,16 @@ export default function Contact() {
           min-height: 120px;
         }
 
+        .contact-form .btn:disabled {
+          opacity: 0.65;
+          cursor: not-allowed;
+          transform: none;
+        }
+
+        .contact-form .btn:active:not(:disabled) {
+          transform: translateY(0) scale(0.99);
+        }
+
         @media (max-width: 900px) {
           .contact-grid {
             grid-template-columns: 1fr;
