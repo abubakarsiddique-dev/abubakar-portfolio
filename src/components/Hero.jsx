@@ -213,7 +213,7 @@ export default function Hero() {
 
               {/* Mobile App Preview Overlay Composition */}
               <div className="app-preview-composition">
-                <img src={mentoraImg} alt="Flutter Application Preview" className="app-preview-img" width="400" height="190" loading="eager" />
+                <img src={mentoraImg} alt="Flutter Application Preview" className="app-preview-img" width="400" height="190" loading="eager" decoding="async" />
                 <div className="app-preview-badge">
                   <span>Flutter App Preview</span>
                 </div>
