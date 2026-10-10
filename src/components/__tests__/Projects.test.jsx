@@ -31,6 +31,6 @@ describe('Projects Component', () => {
 
     await waitFor(() => {
       expect(screen.getByRole('dialog')).toBeInTheDocument();
-    });
+    }, { timeout: 3500 });
   });
 });

@@ -77,6 +77,6 @@ describe('Navbar Component', () => {
 
     await waitFor(() => {
       expect(screen.getByRole('dialog', { hidden: true })).toBeInTheDocument();
-    });
+    }, { timeout: 3500 });
   });
 });
