@@ -23,12 +23,12 @@ export default class ErrorBoundary extends React.Component {
     if (!this.state.hasError) return this.props.children;
 
     return (
-      <main className="error-boundary-fallback">
+      <main className="error-boundary-fallback" role="alert" aria-live="assertive">
         <div className="error-boundary-card">
           <span className="error-boundary-kicker">Temporary issue</span>
           <h1>Something went wrong while loading this portfolio.</h1>
           <p>Please refresh the page or get in touch directly if the problem continues.</p>
-          <button type="button" onClick={this.handleReset} className="btn btn-primary">
+          <button type="button" onClick={this.handleReset} className="btn btn-primary" aria-label="Refresh Portfolio">
             Refresh Portfolio
           </button>
         </div>
