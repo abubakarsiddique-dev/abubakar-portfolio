@@ -1,6 +1,6 @@
 # Abubakar Siddique — Developer Portfolio
 
-[![CI Pipeline](https://github.com/mrabukust-cmd/abubakar-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/mrabukust-cmd/abubakar-portfolio/actions/workflows/ci.yml)
+[![CI Pipeline](https://github.com/abubakarsiddique-dev/abubakar-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/abubakarsiddique-dev/abubakar-portfolio/actions/workflows/ci.yml)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-8.1-646CFF?logo=vite&logoColor=white)](https://vite.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-C29B7F.svg)](LICENSE)
@@ -87,8 +87,8 @@ The GitHub Actions CI workflow runs these same checks on every pull request and 
 
 ## 📱 Featured Engineering Projects
 
-- **[Mentora](https://github.com/mrabukust-cmd/Mentora)** — Peer tutoring and skill exchange mobile app featuring 1-on-1 HD video calling via Agora RTC, Firestore signaling, and smart mentor matching.
-- **[EduManage](https://github.com/mrabukust-cmd/EduManage)** — Academic portal connecting Parents, Students, Teachers, and Admins with automated attendance tracking, grade analytics, and CSV report export.
+- **[Mentora](https://github.com/abubakarsiddique-dev/Mentora)** — Peer tutoring and skill exchange mobile app featuring 1-on-1 HD video calling via Agora RTC, Firestore signaling, and smart mentor matching.
+- **[EduManage](https://github.com/abubakarsiddique-dev/EduManage)** — Academic portal connecting Parents, Students, Teachers, and Admins with automated attendance tracking, grade analytics, and CSV report export.
 - **ZiloLive** — Live streaming client with real-time stream interactions, ranking leaderboards, and coin wallet management.
 
 ---
