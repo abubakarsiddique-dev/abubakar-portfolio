@@ -28,6 +28,8 @@ describe('ErrorBoundary Component', () => {
       </ErrorBoundary>
     );
 
+    expect(screen.getByRole('alert')).toBeInTheDocument();
+    expect(screen.getByRole('alert')).toHaveAttribute('aria-live', 'assertive');
     expect(screen.getByText(/Something went wrong while loading this portfolio/i)).toBeInTheDocument();
     expect(screen.getByText(/Temporary issue/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /Refresh Portfolio/i })).toBeInTheDocument();
