@@ -411,6 +411,10 @@ textarea:focus-visible {
   transform: translateY(-1px);
 }
 
+.btn:active {
+  transform: translateY(0) scale(0.99);
+}
+
 .btn-secondary {
   background: var(--bg-secondary);
   color: var(--text-primary);
