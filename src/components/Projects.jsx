@@ -12,6 +12,7 @@ export default function Projects() {
   const fullStackProjects = projectsData.filter((project) => project.projectType === 'full-stack');
   const contributedProjects = projectsData.filter((project) => project.projectType === 'contributed');
   const privateCount = projectsData.filter((project) => project.githubStatus === 'private').length;
+  const soloCount = projectsData.filter((project) => project.contribution?.team === 'Solo project').length;
 
   const renderProjectGrid = (projects) => (
     <motion.div layout className="projects-grid">
@@ -56,7 +57,7 @@ export default function Projects() {
             <span>full-stack builds</span>
           </div>
           <div className="project-trust-item">
-            <strong>1</strong>
+            <strong>{soloCount}</strong>
             <span>solo implementation</span>
           </div>
           <div className="project-trust-item">
