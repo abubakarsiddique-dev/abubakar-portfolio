@@ -11,6 +11,9 @@ describe('Projects Component', () => {
     expect(screen.getByText(/My Works & Contributions/i)).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /Selected Projects/i })).toBeInTheDocument();
     expect(screen.getByText(/featured projects/i)).toBeInTheDocument();
+    expect(screen.getByText(/full-stack builds/i)).toBeInTheDocument();
+    expect(screen.getByText(/solo implementation/i)).toBeInTheDocument();
+    expect(screen.getByText(/private\/client repos/i)).toBeInTheDocument();
   });
 
   it('renders all featured project titles in the catalog', () => {
