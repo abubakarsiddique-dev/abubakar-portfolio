@@ -1,3 +1,18 @@
+/**
+ * @typedef {Object} SkillItem
+ * @property {string} name - Name of the technical competency or tool.
+ * @property {string} level - Classification level or role category.
+ * @property {string} description - Brief summary of implementation scope.
+ * 
+ * @typedef {Object} SkillCategory
+ * @property {string} id - Unique category identifier.
+ * @property {string} title - Human-readable category title.
+ * @property {string} iconName - Icon reference from react-icons.
+ * @property {string} description - Explanatory category description.
+ * @property {SkillItem[]} skills - Array of competencies belonging to this category.
+ */
+
+/** @type {SkillCategory[]} */
 export const skillCategories = [
   {
     id: "mobile",
