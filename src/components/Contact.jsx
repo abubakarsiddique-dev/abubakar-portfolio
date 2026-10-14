@@ -319,13 +319,13 @@ export default function Contact() {
                   name="message"
                   rows="5"
                   value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Hi Abubakar, I'd like to discuss a mobile app project..."
-                    className="form-input form-textarea"
-                    maxLength={2000}
-                    aria-describedby="message-char-count"
-                    aria-invalid={status === 'error' && !formData.message}
-                    required
+                  onChange={handleChange}
+                  placeholder="Hi Abubakar, I'd like to discuss a mobile app project..."
+                  className="form-input form-textarea"
+                  maxLength={2000}
+                  aria-describedby="message-char-count"
+                  aria-invalid={status === 'error' && !formData.message}
+                  required
                 />
               </div>
 
