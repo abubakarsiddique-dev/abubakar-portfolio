@@ -3,6 +3,7 @@
 [![CI Pipeline](https://github.com/abubakarsiddique-dev/abubakar-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/abubakarsiddique-dev/abubakar-portfolio/actions/workflows/ci.yml)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-8.1-646CFF?logo=vite&logoColor=white)](https://vite.dev)
+[![Version](https://img.shields.io/badge/version-1.1.0-4caf50.svg)](package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-C29B7F.svg)](LICENSE)
 
 A production-ready, high-performance personal portfolio website built with **React 19**, **Vite 8**, **Framer Motion**, and **React Icons**.
