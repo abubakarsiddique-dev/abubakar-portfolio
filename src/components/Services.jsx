@@ -2,6 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaBug, FaCloud, FaMobileAlt } from 'react-icons/fa';
 
+/**
+ * @typedef {Object} ServiceItem
+ * @property {import('react-icons').IconType} icon - React icon component representing the service category.
+ * @property {string} title - Short title identifying the service offering.
+ * @property {string} description - Detailed description of the service scope and value proposition.
+ * @property {string[]} deliverables - List of concrete deliverables included in the service.
+ */
+
+/** @type {ServiceItem[]} */
 const services = [
   {
     icon: FaMobileAlt,
