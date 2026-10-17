@@ -33,6 +33,18 @@ describe('Portfolio App Smoke Test', () => {
     expect(screen.getByRole('button', { name: /Refresh Portfolio/i })).toBeInTheDocument();
     consoleError.mockRestore();
   });
+
+  it('renders skip link and accessible main region with matching anchor target', () => {
+    render(<App />);
+    const skipLink = screen.getByRole('link', { name: /Skip to main content/i });
+    expect(skipLink).toBeInTheDocument();
+    expect(skipLink).toHaveAttribute('href', '#main-content');
+
+    const mainContent = document.getElementById('main-content');
+    expect(mainContent).toBeInTheDocument();
+    expect(mainContent).toHaveAttribute('tabIndex', '-1');
+    expect(mainContent).toHaveAttribute('aria-label', 'Portfolio content');
+  });
 });
 
 describe('Email Validation Logic (Contact)', () => {
