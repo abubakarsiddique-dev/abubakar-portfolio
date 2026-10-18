@@ -41,7 +41,11 @@ export default function Footer() {
             <ul className="footer-links">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} onClick={(e) => handleNavClick(e, link.href)}>
+                  <a
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    aria-label={`Navigate to ${link.name} section`}
+                  >
                     {link.name}
                   </a>
                 </li>
