@@ -35,7 +35,10 @@ const services = [
 export default function Services() {
   const scrollToContact = (event) => {
     event.preventDefault();
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    });
   };
 
   return (
