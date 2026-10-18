@@ -59,4 +59,20 @@ describe('Footer Component', () => {
       behavior: 'smooth'
     });
   });
+
+  it('renders aria-label on each footer navigation link for screen reader context', () => {
+    render(<Footer />);
+
+    navLinks.forEach((link) => {
+      const navItem = screen.getByRole('link', { name: new RegExp(`Navigate to ${link.name} section`, 'i') });
+      expect(navItem).toBeInTheDocument();
+    });
+  });
+
+  it('renders technology attribution in footer bottom bar', () => {
+    render(<Footer />);
+
+    expect(screen.getByText(/React\.js/i)).toBeInTheDocument();
+    expect(screen.getByText(/Framer Motion/i)).toBeInTheDocument();
+  });
 });
