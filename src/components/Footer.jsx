@@ -195,6 +195,13 @@ export default function Footer() {
           border-color: var(--accent-primary);
         }
 
+        .social-icon-btn:focus-visible {
+          outline: 2px solid var(--accent-primary);
+          outline-offset: 3px;
+          color: var(--accent-primary);
+          border-color: var(--accent-primary);
+        }
+
         .scroll-top-btn {
           margin-top: auto;
         }
