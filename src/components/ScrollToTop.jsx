@@ -30,6 +30,7 @@ export default function ScrollToTop() {
           onClick={scrollToTop}
           className="floating-scroll-top"
           aria-label="Scroll to top of page"
+          title="Back to top"
           initial={{ opacity: 0, scale: 0.8, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 10 }}
@@ -37,7 +38,7 @@ export default function ScrollToTop() {
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 350, damping: 22 }}
         >
-          <FaArrowUp className="scroll-icon" />
+          <FaArrowUp className="scroll-icon" aria-hidden="true" />
         </motion.button>
       )}
     </AnimatePresence>
