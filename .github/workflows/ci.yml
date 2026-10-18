@@ -10,6 +10,13 @@ jobs:
   verify:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [20, 22]
+      fail-fast: true
+
+    name: "Verify (Node ${{ matrix.node-version }})"
+
     steps:
       - name: Checkout Codebase
         uses: actions/checkout@v4
@@ -17,7 +24,7 @@ jobs:
       - name: Setup Node.js Environment
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
       - name: Install Dependencies
