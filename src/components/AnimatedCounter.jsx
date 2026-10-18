@@ -19,6 +19,10 @@ export default function AnimatedCounter({ from = 0, to, duration = 1.5, suffix =
       return undefined;
     }
 
+    if (!Number.isFinite(numericTo)) {
+      return undefined;
+    }
+
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / (duration * 1000), 1);
