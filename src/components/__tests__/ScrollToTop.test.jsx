@@ -85,4 +85,16 @@ describe('ScrollToTop Component', () => {
     unmount();
     expect(removeEventListenerSpy).toHaveBeenCalledWith('scroll', expect.any(Function));
   });
+
+  it('renders button with title tooltip when visible', () => {
+    render(<ScrollToTop />);
+
+    act(() => {
+      window.scrollY = 500;
+      window.dispatchEvent(new Event('scroll'));
+    });
+
+    const button = screen.getByRole('button', { name: /Scroll to top of page/i });
+    expect(button).toHaveAttribute('title', 'Back to top');
+  });
 });
