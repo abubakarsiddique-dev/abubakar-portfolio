@@ -2,6 +2,42 @@ import ziloliveImg from '../assets/images/zilolive.png';
 import mentoraImg from '../assets/images/mentora_real.png';
 import schoolSystemImg from '../assets/images/edu_manage_mockup.png';
 
+/**
+ * @typedef {Object} ProjectModalData
+ * @property {string} problem - Technical problem statement.
+ * @property {string} solution - Implemented technical solution.
+ * @property {string} result - Measurable or operational result.
+ * @property {string[]} challenges - Key architectural or debugging challenges.
+ * @property {string} contribution - Summary of frontend and backend contributions.
+ *
+ * @typedef {Object} ProjectContribution
+ * @property {string} role - Developer's role on the project.
+ * @property {string} summary - High-level summary of responsibilities.
+ * @property {string[]} responsibilities - Itemized engineering contributions.
+ * @property {string} [team] - Optional team structure note.
+ *
+ * @typedef {Object} ProjectItem
+ * @property {string} id - Unique project slug identifier.
+ * @property {"full-stack" | "contributed" | "solo"} projectType - Project execution classification.
+ * @property {string} title - Project title.
+ * @property {string} tagline - Concise tagline.
+ * @property {string} category - Project category or domain.
+ * @property {string} badge - Display badge label.
+ * @property {string} [image] - Static import or path to project screenshot/mockup.
+ * @property {string[]} technologies - Array of key technologies utilized.
+ * @property {string} shortDescription - Summary description.
+ * @property {string[]} features - List of highlighted product features.
+ * @property {string} githubUrl - GitHub repository URL.
+ * @property {string} liveUrl - Live or demo URL.
+ * @property {"live" | "video" | "apk" | "none"} demoType - Demo preview type.
+ * @property {"public" | "private" | "case-study"} githubStatus - Repository visibility status.
+ * @property {string} githubStatusNote - Explanatory repository note.
+ * @property {string[]} [proofPoints] - Verified metrics and scope points.
+ * @property {ProjectModalData} modalData - Deep-dive case study modal data.
+ * @property {ProjectContribution} contribution - Engineering contribution breakdown.
+ */
+
+/** @type {ProjectItem[]} */
 export const projectsData = [
   {
     id: "mentora",

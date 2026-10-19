@@ -2,6 +2,52 @@ import { socialLinks } from './socialLinks';
 import profileImg from '../assets/images/profile.png';
 import { projectsData } from './projects';
 
+/**
+ * @typedef {Object} LearningTopic
+ * @property {string} title - Topic or framework name.
+ * @property {string} detail - Description of focus area.
+ *
+ * @typedef {Object} StatItem
+ * @property {string} label - Metric label.
+ * @property {number} count - Metric numeric value.
+ * @property {string} suffix - Metric suffix.
+ * @property {string} detail - Brief context of the statistic.
+ *
+ * @typedef {Object} JourneyItem
+ * @property {string} period - Time period or stage badge.
+ * @property {string} role - Role or focus title.
+ * @property {string} institution - Educational or project setting.
+ * @property {string} description - Description of achievements.
+ * @property {string[]} skills - Array of relevant skills or practices.
+ *
+ * @typedef {Object} BuildStep
+ * @property {string} step - Step numbering.
+ * @property {string} title - Step title.
+ * @property {string} description - Step methodology description.
+ *
+ * @typedef {Object} ProfileData
+ * @property {string} name - Developer's full name.
+ * @property {string} shortName - Monogram or initials.
+ * @property {string} title - Professional headline.
+ * @property {string} status - Current availability status.
+ * @property {string} education - Academic degree.
+ * @property {string} email - Primary contact email.
+ * @property {string} location - Developer's location.
+ * @property {string} profileImage - Profile portrait asset.
+ * @property {string} heroBadge - Hero banner badge.
+ * @property {string} heroHeading - Primary hero heading.
+ * @property {string} heroSubheading - Subheading.
+ * @property {string} heroDescription - Introductory pitch.
+ * @property {string[]} aboutText - Detailed about paragraphs.
+ * @property {{ heading: string, bullets: string[] }} philosophy - Engineering principles.
+ * @property {LearningTopic[]} currentlyLearning - Continuous learning topics.
+ * @property {StatItem[]} stats - Profile summary statistics.
+ * @property {JourneyItem[]} journey - Educational and practical timeline.
+ * @property {BuildStep[]} howIBuild - Engineering methodology steps.
+ * @property {typeof socialLinks} socials - Connected social profile endpoints.
+ */
+
+/** @type {ProfileData} */
 export const profileData = {
   name: "Abubakar Siddique",
   shortName: "AS",
