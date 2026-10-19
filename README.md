@@ -3,7 +3,7 @@
 [![CI Pipeline](https://github.com/abubakarsiddique-dev/abubakar-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/abubakarsiddique-dev/abubakar-portfolio/actions/workflows/ci.yml)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-8.1-646CFF?logo=vite&logoColor=white)](https://vite.dev)
-[![Version](https://img.shields.io/badge/version-1.1.0-4caf50.svg)](package.json)
+[![Version](https://img.shields.io/badge/version-1.2.0-4caf50.svg)](package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-C29B7F.svg)](LICENSE)
 
 A production-ready, high-performance personal portfolio website built with **React 19**, **Vite 8**, **Framer Motion**, and **React Icons**.
@@ -18,7 +18,7 @@ Designed specifically for **Abubakar Siddique** (Software Engineering Student & 
 - **Styling**: Nordic Architectural Design System (Vanilla CSS3 Tokens, Zero Bloat)
 - **Animations**: Framer Motion 12 (Reduced-motion accessible)
 - **Typography**: Instrument Serif, Syne, DM Sans, Space Mono
-- **Testing**: Vitest 4 + React Testing Library (81 automated tests across 21 test suites)
+- **Testing**: Vitest 4 + React Testing Library (104 automated tests across 24 test suites)
 - **Linting**: Oxlint (Sub-20ms ultra-fast AST linting)
 - **Security & Headers**: HTTP Strict Transport Security (HSTS), X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy configured via `vercel.json`
 - **Bundle Optimization**: Rollup manual chunks splitting (`react-vendor`, `motion-vendor`, `icons-vendor`)
@@ -36,7 +36,7 @@ Designed specifically for **Abubakar Siddique** (Software Engineering Student & 
 
 ---
 
-## 🧪 Automated Test Suites (81 Tests across 21 Suites)
+## 🧪 Automated Test Suites (104 Tests across 24 Suites)
 
 The test suite validates data schemas, business logic, component behavior, accessibility fallbacks, and error recovery:
 
@@ -47,7 +47,9 @@ The test suite validates data schemas, business logic, component behavior, acces
 | **Hero Section** | `src/components/__tests__/Hero.test.jsx` | Hero title, subtitle, CTAs, interactive Dart code tabs, clipboard copy feedback |
 | **About Section** | `src/components/__tests__/About.test.jsx` | Profile imagery, engineering philosophy, story paragraphs, continuous learning topics |
 | **Projects Showcase** | `src/components/__tests__/Projects.test.jsx` | Project catalog rendering, trust summary metrics, project details modal opening |
+| **Project Card Component** | `src/components/__tests__/ProjectCard.test.jsx` | Card rendering, taglines, tech badges, modal opening trigger, open source & private indicators |
 | **Project Details Modal** | `src/components/__tests__/ProjectModal.test.jsx` | Modal dialog presentation, feature list, tech pills, close button & Escape handling |
+| **Resume & CV Modal** | `src/components/__tests__/ResumeModal.test.jsx` | Full CV presentation, education & experience blocks, clipboard email copy, window print action, Escape dismissal |
 | **Skills & Filter Tabs** | `src/components/__tests__/Skills.test.jsx` | Skills categories, category filter tabs, proficiency indicators, reset to all |
 | **Journey Timeline** | `src/components/__tests__/Journey.test.jsx` | Timeline milestones, role badges, technical achievements |
 | **Contact Form** | `src/components/__tests__/Contact.test.jsx` | Validation, honeypot spam trap, character counter, clipboard copy feedback |
@@ -56,13 +58,15 @@ The test suite validates data schemas, business logic, component behavior, acces
 | **Scroll To Top** | `src/components/__tests__/ScrollToTop.test.jsx` | Scroll threshold visibility, smooth scroll, reduced motion, listener cleanup |
 | **Animated Counter** | `src/components/__tests__/AnimatedCounter.test.jsx` | Prefix/suffix bounds, in-view trigger, reduced-motion bypass, frame cancellation |
 | **Footer & Navigation** | `src/components/__tests__/Footer.test.jsx` | Dynamic copyright year, navigation mapping, external links, back-to-top |
-| **Error Boundary** | `src/components/__tests__/ErrorBoundary.test.jsx` | Safe render, error catching, fallback UI, window reload trigger |
+| **Error Boundary** | `src/components/__tests__/ErrorBoundary.test.jsx` | Safe render, error catching, fallback UI, window reload trigger, alert role |
+| **Icon Mapping Helpers** | `src/utils/__tests__/iconMap.test.jsx` | Category and demo icon mappings, prop forwarding, accessibility attributes, fallback defaults |
 | **Projects Data Schema** | `src/data/__tests__/projects.test.js` | Schema integrity, required keys, image URLs, GitHub repo link validity |
 | **Journey Data** | `src/data/__tests__/journey.test.js` | Timeline entries, period badges, technical milestones |
-| **Navigation & Links** | `src/data/__tests__/navigation.test.js` | Route anchors, section link identifiers |
+| **Navigation & Links** | `src/data/__tests__/navigation.test.js` | Route anchors, section link identifiers, icon component validations |
 | **Profile & Bio** | `src/data/__tests__/profile.test.js` | Author identity, social endpoints, headline data |
 | **Skills Catalog** | `src/data/__tests__/skills.test.js` | Categories, technology tiers, icon bindings |
-| **Social Links** | `src/data/__tests__/socialLinks.test.js` | Formatted displays, URI schemes |
+| **Social Links** | `src/data/__tests__/socialLinks.test.js` | Formatted displays, handle extraction, URI schemes |
+
 
 ---
 
@@ -77,7 +81,7 @@ Available quality checks:
 
 ```bash
 npm run lint    # Runs Oxlint across all JSX and JS files
-npm test        # Runs Vitest unit and integration test suite (81 tests across 21 test suites)
+npm test        # Runs Vitest unit and integration test suite (104 tests across 24 test suites)
 npm run build   # Validates production compilation and asset generation
 npm run check   # Runs lint, test, and build in sequence
 ```
