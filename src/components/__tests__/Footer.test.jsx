@@ -1,5 +1,4 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, within } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import Footer from '../Footer';
 import { profileData } from '../../data/profile';
@@ -22,8 +21,9 @@ describe('Footer Component', () => {
   it('renders navigation links mapped from navigation configuration', () => {
     render(<Footer />);
 
+    const footerNav = screen.getByRole('navigation', { name: /Footer navigation/i });
     navLinks.forEach((link) => {
-      const navItem = screen.getByRole('link', { name: link.name });
+      const navItem = within(footerNav).getByRole('link', { name: new RegExp(link.name, 'i') });
       expect(navItem).toBeInTheDocument();
       expect(navItem).toHaveAttribute('href', link.href);
     });
