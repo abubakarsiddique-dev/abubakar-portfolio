@@ -127,11 +127,18 @@ section[id], main[id] {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+/* Text Selection Styling */
+::selection {
+  background-color: var(--accent-primary);
+  color: var(--accent-contrast, #422631);
+}
+
 /* Global focus-visible styling for keyboard accessibility */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
+select:focus-visible,
 [tabindex]:focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
