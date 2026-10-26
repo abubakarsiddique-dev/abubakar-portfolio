@@ -75,4 +75,29 @@ describe('Footer Component', () => {
     expect(screen.getByText(/React\.js/i)).toBeInTheDocument();
     expect(screen.getByText(/Framer Motion/i)).toBeInTheDocument();
   });
+
+  it('respects prefers-reduced-motion when scrolling back to top', () => {
+    const scrollToMock = vi.fn();
+    window.scrollTo = scrollToMock;
+    window.matchMedia = vi.fn().mockImplementation((query) => ({
+      matches: query.includes('prefers-reduced-motion: reduce'),
+      media: query,
+      onchange: null,
+      addListener: vi.fn(),
+      removeListener: vi.fn(),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+      dispatchEvent: vi.fn(),
+    }));
+
+    render(<Footer />);
+
+    const backToTopButton = screen.getByRole('button', { name: /Back to top of page/i });
+    fireEvent.click(backToTopButton);
+
+    expect(scrollToMock).toHaveBeenCalledWith({
+      top: 0,
+      behavior: 'auto'
+    });
+  });
 });
