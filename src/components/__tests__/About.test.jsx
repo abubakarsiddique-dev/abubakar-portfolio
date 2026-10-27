@@ -12,12 +12,14 @@ describe('About Component', () => {
     expect(screen.getByRole('heading', { name: /About Me/i })).toBeInTheDocument();
   });
 
-  it('renders profile portrait image with descriptive alt text', () => {
+  it('renders profile portrait image with descriptive alt text and performance attributes', () => {
     render(<About />);
 
     const img = screen.getByRole('img', { name: new RegExp(profileData.name, 'i') });
     expect(img).toBeInTheDocument();
     expect(img).toHaveAttribute('src', profileData.profileImage);
+    expect(img).toHaveAttribute('loading', 'lazy');
+    expect(img).toHaveAttribute('decoding', 'async');
   });
 
   it('renders philosophy heading and numbered engineering mindset bullets', () => {
