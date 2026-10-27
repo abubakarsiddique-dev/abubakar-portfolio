@@ -27,4 +27,19 @@ describe('Journey Component', () => {
       });
     });
   });
+
+  it('renders experience section anchor and alternating timeline layout classes', () => {
+    const { container } = render(<Journey />);
+
+    const section = container.querySelector('#experience');
+    expect(section).toBeInTheDocument();
+
+    const timelineItems = container.querySelectorAll('.timeline-item');
+    expect(timelineItems.length).toBe(profileData.journey.length);
+
+    timelineItems.forEach((item, idx) => {
+      const expectedClass = idx % 2 === 0 ? 'left' : 'right';
+      expect(item).toHaveClass(expectedClass);
+    });
+  });
 });
