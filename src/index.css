@@ -83,6 +83,27 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   color-scheme: dark light;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-secondary) var(--bg-secondary);
+}
+
+/* Custom themed webkit scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color-hover);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
 }
 
 @media (prefers-reduced-motion: reduce) {
