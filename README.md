@@ -18,7 +18,7 @@ Designed specifically for **Abubakar Siddique** (Software Engineering Student & 
 - **Styling**: Nordic Architectural Design System (Vanilla CSS3 Tokens, Zero Bloat)
 - **Animations**: Framer Motion 12 (Reduced-motion accessible)
 - **Typography**: Instrument Serif, Syne, DM Sans, Space Mono
-- **Testing**: Vitest 4 + React Testing Library (108 automated tests across 24 test suites)
+- **Testing**: Vitest 4 + React Testing Library (111 automated tests across 24 test suites)
 - **Linting**: Oxlint (Sub-20ms ultra-fast AST linting)
 - **Security & Headers**: HTTP Strict Transport Security (HSTS), X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy configured via `vercel.json`
 - **Bundle Optimization**: Rollup manual chunks splitting (`react-vendor`, `motion-vendor`, `icons-vendor`)
@@ -36,7 +36,7 @@ Designed specifically for **Abubakar Siddique** (Software Engineering Student & 
 
 ---
 
-## 🧪 Automated Test Suites (108 Tests across 24 Suites)
+## 🧪 Automated Test Suites (111 Tests across 24 Suites)
 
 The test suite validates data schemas, business logic, component behavior, accessibility fallbacks, and error recovery:
 
@@ -81,7 +81,7 @@ Available quality checks:
 
 ```bash
 npm run lint    # Runs Oxlint across all JSX and JS files
-npm test        # Runs Vitest unit and integration test suite (104 tests across 24 test suites)
+npm test        # Runs Vitest unit and integration test suite (111 tests across 24 test suites)
 npm run build   # Validates production compilation and asset generation
 npm run check   # Runs lint, test, and build in sequence
 ```
