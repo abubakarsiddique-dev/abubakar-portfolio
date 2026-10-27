@@ -51,4 +51,13 @@ describe('ProjectModal Component', () => {
 
     expect(onCloseMock).toHaveBeenCalledTimes(1);
   });
+
+  it('locks body overflow on mount and restores it on unmount', () => {
+    const { unmount } = render(<ProjectModal project={sampleProject} onClose={vi.fn()} />);
+
+    expect(document.body.style.overflow).toBe('hidden');
+
+    unmount();
+    expect(document.body.style.overflow).toBe('unset');
+  });
 });
