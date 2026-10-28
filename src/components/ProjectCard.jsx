@@ -101,7 +101,7 @@ export default function ProjectCard({ project, onOpenModal }) {
             onClick={() => onOpenModal(project)}
             aria-label={`View details for ${project.title}`}
           >
-            <FaInfoCircle />
+            <FaInfoCircle aria-hidden="true" />
             <span>View Details</span>
           </button>
 
@@ -115,7 +115,7 @@ export default function ProjectCard({ project, onOpenModal }) {
               title="View Source on GitHub"
               aria-label={`View ${project.title} repository on GitHub`}
             >
-              <FaGithub />
+              <FaGithub aria-hidden="true" />
             </a>
           ) : (
             <span 
