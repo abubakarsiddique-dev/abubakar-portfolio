@@ -27,6 +27,7 @@ export default function ScrollToTop() {
     <AnimatePresence>
       {visible && (
         <motion.button
+          type="button"
           onClick={scrollToTop}
           className="floating-scroll-top"
           aria-label="Scroll to top of page"

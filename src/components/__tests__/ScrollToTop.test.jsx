@@ -96,5 +96,6 @@ describe('ScrollToTop Component', () => {
 
     const button = screen.getByRole('button', { name: /Scroll to top of page/i });
     expect(button).toHaveAttribute('title', 'Back to top');
+    expect(button).toHaveAttribute('type', 'button');
   });
 });
