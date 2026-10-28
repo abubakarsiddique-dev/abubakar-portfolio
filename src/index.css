@@ -148,6 +148,18 @@ section[id], main[id] {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+/* Universal keyboard navigation focus rings adhering to WCAG 2.4.7 */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+
 /* Text Selection Styling */
 ::selection {
   background-color: var(--accent-primary);
