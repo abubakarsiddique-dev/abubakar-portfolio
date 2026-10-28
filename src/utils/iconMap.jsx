@@ -47,6 +47,8 @@ export const getDemoIcon = (demoType, props = {}) => {
       return <FaAndroid {...props} />;
     case 'live':
       return <FaExternalLinkAlt {...props} />;
+    case 'case-study':
+      return <FaBookOpen {...props} />;
     default:
       return <FaBookOpen {...props} />;
   }
