@@ -97,4 +97,18 @@ describe('ProjectCard Component', () => {
     expect(screen.getByText('TE')).toBeInTheDocument();
     expect(screen.getByText('Project Preview')).toBeInTheDocument();
   });
+
+  it('renders case study status badge and demo format badge', () => {
+    const caseStudyProject = {
+      ...mockProject,
+      githubStatus: 'case-study',
+      liveUrl: '',
+      demoType: 'video',
+    };
+
+    render(<ProjectCard project={caseStudyProject} onOpenModal={vi.fn()} />);
+
+    expect(screen.getAllByText(/Case Study/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByText('Video')).toBeInTheDocument();
+  });
 });
